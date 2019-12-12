@@ -93,7 +93,9 @@ bool checkConv_endorseIRT (const arma::mat &oldalpha,
         devgamma = (abs(curgamma - oldgamma)).max() ;
     }
 
-    Rcout << devX << " " << devA << " " << devB << std::endl ;
+    Rcout << devalpha << " " << devbeta << " " <<
+      devtheta << " " << devw << " " <<
+      devgamma << std::endl ;
 
     bool check = (devalpha < thresh) &
         (devbeta < thresh) &
